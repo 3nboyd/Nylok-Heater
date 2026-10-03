@@ -1,0 +1,51 @@
+name: Design or validation issue
+description: Report a schematic, PCB, component, test, or safety concern.
+title: "[Design]: "
+labels:
+  - design-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is a non-fabrication-ready concept. Do not energize suspect hardware to reproduce an issue.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Schematic / netlist
+        - PCB layout / DRC
+        - Component selection / BOM
+        - Power / battery safety
+        - Thermal / mechanical
+        - Firmware / controls
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Revision
+      description: Commit SHA, tag, or branch.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the concern, expected behavior, and potential impact.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include primary-source links, ERC/DRC output, calculations, or measurement conditions.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: I did not energize unsafe or suspect hardware merely to reproduce this issue.
+          required: true

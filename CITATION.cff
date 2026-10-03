@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you reference this concept repository, please cite it using this metadata."
+title: "Nylok Handheld Induction Heater Controller"
+type: software
+authors:
+  - name: "3nboyd"
+repository-code: "https://github.com/3nboyd/Nylok-Heater"
+version: "0.1.0-concept"
+date-released: 2026-10-03
+abstract: "KiCad concept reconstruction and engineering study for a two-mode handheld induction-heater controller."

@@ -1,0 +1,66 @@
+Reference,Symbol/MPN,Value,Footprint,Function
+J1,Conn_01x02,PROTECTED BATTERY INPUT,Connector_Generic:Conn_01x02,2-pin high-current input
+J2,Conn_01x02,HEATER POWER OUTPUT,Connector_Generic:Conn_01x02,To external ZVS driver DC input
+J3,Conn_01x05,SWD PROGRAMMING,Connector_Generic:Conn_01x05,SWDIO/SWCLK/NRST/3V3/GND
+J4,Conn_01x04,I2C DISPLAY,Connector_Generic:Conn_01x04,GND/3V3/SCL/SDA
+U1,INA180A2IDBVR,INA180A2,Package_TO_SOT_SMD:SOT-23-5,Current sense amplifier
+U2,MP8771GQ-Z,MP8771,Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.7x1.7mm,Buck regulator
+U3,AP7381-33Y-13,AP7381-33,Package_TO_SOT_SMD:SOT-89-3,3.3 V regulator
+U4,STM32G030F6P6,STM32G030F6P6,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,MCU / timer / controller
+U5,MCP4725A0T-E/CH,MCP4725,Package_TO_SOT_SMD:SOT-23-6,Power-setting DAC
+Q1,AO4409,AO4409,Package_SO:SO-8_3.9x4.9mm_P1.27mm,Heater high-side switch
+Q2,AO4409,AO4409,Package_SO:SO-8_3.9x4.9mm_P1.27mm,Heater high-side switch
+Q3,BC817-40,BC817-40,Package_TO_SOT_SMD:SOT-23,Gate driver transistor
+L1,SRP1265A-1R5M,1.5uH,Inductor_SMD:L_12.5x12.5_H6.5,Buck inductor
+D1,LED,STATUS,LED_SMD:LED_0603_1608Metric,Status LED
+SW1,SW_Push,START / STOP,Button_Switch_SMD:SW_SPST_TL3301AN,Start/stop button
+SW2,SW_Push,LIQUID / POWDER,Button_Switch_SMD:SW_SPST_TL3301AN,Mode button
+R1,R,5m 2W 1%,Resistor_SMD:R_2512_6332Metric,
+R2,R,10,Resistor_SMD:R_0603_1608Metric,
+R3,R,10,Resistor_SMD:R_0603_1608Metric,
+R4,R,1k,Resistor_SMD:R_0603_1608Metric,
+R5,R,100k,Resistor_SMD:R_0603_1608Metric,
+R6,R,33k,Resistor_SMD:R_0603_1608Metric,
+R7,R,100k,Resistor_SMD:R_0603_1608Metric,
+R8,R,10k,Resistor_SMD:R_0603_1608Metric,
+R9,R,23.2k 1%,Resistor_SMD:R_0603_1608Metric,
+R10,R,2.49k 1%,Resistor_SMD:R_0603_1608Metric,
+R11,R,1k,Resistor_SMD:R_0603_1608Metric,
+R12,R,54.9k 1%,Resistor_SMD:R_0603_1608Metric,
+R13,R,4.7k,Resistor_SMD:R_0603_1608Metric,
+R14,R,100,Resistor_SMD:R_0603_1608Metric,
+R15,R,47k,Resistor_SMD:R_0603_1608Metric,
+R16,R,4.7k,Resistor_SMD:R_0603_1608Metric,
+R17,R,100k,Resistor_SMD:R_0603_1608Metric,
+R18,R,100k,Resistor_SMD:R_0603_1608Metric,
+R19,R,47k,Resistor_SMD:R_0603_1608Metric,
+R20,R,10k,Resistor_SMD:R_0603_1608Metric,
+R21,R,100k,Resistor_SMD:R_0603_1608Metric,
+R22,R,4.7k,Resistor_SMD:R_0603_1608Metric,
+R23,R,4.7k,Resistor_SMD:R_0603_1608Metric,
+R24,R,10k,Resistor_SMD:R_0603_1608Metric,
+R25,R,10k,Resistor_SMD:R_0603_1608Metric,
+R26,R,1k,Resistor_SMD:R_0603_1608Metric,
+C1,C,10n,Capacitor_SMD:C_0603_1608Metric,
+C2,C,100n,Capacitor_SMD:C_0603_1608Metric,
+C3,C,100n,Capacitor_SMD:C_0603_1608Metric,
+C4,C,10n,Capacitor_SMD:C_0603_1608Metric,
+C5,C,22u 25V X7R,Capacitor_SMD:C_1210_3225Metric,
+C6,C,22u 25V X7R,Capacitor_SMD:C_1210_3225Metric,
+C7,C,22u 25V X7R,Capacitor_SMD:C_1210_3225Metric,
+C8,C,100n,Capacitor_SMD:C_0603_1608Metric,
+C9,C,1u,Capacitor_SMD:C_0603_1608Metric,
+C10,C,100n,Capacitor_SMD:C_0603_1608Metric,
+C11,C,47n,Capacitor_SMD:C_0603_1608Metric,
+C12,C,47u 10V X7R,Capacitor_SMD:C_1210_3225Metric,
+C13,C,47u 10V X7R,Capacitor_SMD:C_1210_3225Metric,
+C14,C,47u 10V X7R,Capacitor_SMD:C_1210_3225Metric,
+C15,C,56p C0G,Capacitor_SMD:C_0603_1608Metric,
+C16,C,10n,Capacitor_SMD:C_0603_1608Metric,
+C17,C,1u 16V,Capacitor_SMD:C_0603_1608Metric,
+C18,C,2.2u,Capacitor_SMD:C_0603_1608Metric,
+C19,C,10u,Capacitor_SMD:C_0603_1608Metric,
+C20,C,100n,Capacitor_SMD:C_0603_1608Metric,
+C21,C,4.7u,Capacitor_SMD:C_0603_1608Metric,
+C22,C,100n,Capacitor_SMD:C_0603_1608Metric,
+C23,C,100n,Capacitor_SMD:C_0603_1608Metric,

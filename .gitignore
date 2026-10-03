@@ -1,0 +1,27 @@
+# KiCad generated/cache files
+*-backups/
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_prl
+*.kicad_sch-bak
+*.lck
+fp-info-cache
+
+# Local fabrication/export outputs
+hardware/fabrication/
+hardware/gerbers/
+*.gbr
+*.drl
+*.pos
+*.step
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Python cache
+__pycache__/
+*.py[cod]

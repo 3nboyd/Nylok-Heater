@@ -1,0 +1,224 @@
+EESchema Schematic File Version 4
+LIBS:power
+LIBS:device
+LIBS:Connector_Generic
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+Sheet 1 1
+Title "Nylok Two-Mode Handheld Induction Heater Controller"
+Date "2026-10-03"
+Rev "A - reconstructed concept"
+Comp "Notre Dame / Nylok Innovate-a-thon"
+Comment1 "External ZVS induction driver connects at J2"
+Comment2 "Conceptual reconstruction from finalized design; verify in KiCad before fabrication"
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 1
+P 1200 1200
+F 0 "J1" H 1350 1300 50  0000 C CNN
+F 1 "BATTERY IN" H 1450 1100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1200 1200 50  0001 C CNN
+	1    1200 1200
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 1
+P 2200 1200
+F 0 "R1" H 2350 1300 50  0000 C CNN
+F 1 "5m 2W 1%" H 2450 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric" H 2200 1200 50  0001 C CNN
+	1    2200 1200
+	1 0 0 -1
+$EndComp
+$Comp
+L Amplifier_Current:INA180 U1
+U 1 1 1
+P 3400 1500
+F 0 "U1" H 3550 1600 50  0000 C CNN
+F 1 "INA180A2" H 3650 1400 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3400 1500 50  0001 C CNN
+	1    3400 1500
+	1 0 0 -1
+$EndComp
+$Comp
+L Regulator_Switching:MP8771 U2
+U 1 1 1
+P 4300 2800
+F 0 "U2" H 4450 2900 50  0000 C CNN
+F 1 "MP8771" H 4550 2700 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.7x1.7mm" H 4300 2800 50  0001 C CNN
+	1    4300 2800
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 1
+P 5400 2600
+F 0 "L1" H 5550 2700 50  0000 C CNN
+F 1 "1.5uH" H 5650 2500 50  0000 C CNN
+F 2 "Inductor_SMD:L_12.5x12.5_H6.5" H 5400 2600 50  0001 C CNN
+	1    5400 2600
+	1 0 0 -1
+$EndComp
+$Comp
+L Regulator_Linear:AP7381-33 U3
+U 1 1 1
+P 4300 4000
+F 0 "U3" H 4450 4100 50  0000 C CNN
+F 1 "AP7381-33" H 4550 3900 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 4300 4000 50  0001 C CNN
+	1    4300 4000
+	1 0 0 -1
+$EndComp
+$Comp
+L MCU_ST_STM32G0:STM32G030F6Px U4
+U 1 1 1
+P 6900 4200
+F 0 "U4" H 7050 4300 50  0000 C CNN
+F 1 "STM32G030F6P6" H 7150 4100 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 6900 4200 50  0001 C CNN
+	1    6900 4200
+	1 0 0 -1
+$EndComp
+$Comp
+L DAC:MCP4725A0x U5
+U 1 1 1
+P 6900 2900
+F 0 "U5" H 7050 3000 50  0000 C CNN
+F 1 "MCP4725" H 7150 2800 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6900 2900 50  0001 C CNN
+	1    6900 2900
+	1 0 0 -1
+$EndComp
+$Comp
+L Transistor_FET:Q_PMOS_GSD Q1
+U 1 1 1
+P 7800 1700
+F 0 "Q1" H 7950 1800 50  0000 C CNN
+F 1 "AO4409" H 8050 1600 50  0000 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 7800 1700 50  0001 C CNN
+	1    7800 1700
+	1 0 0 -1
+$EndComp
+$Comp
+L Transistor_FET:Q_PMOS_GSD Q2
+U 1 1 1
+P 8400 1700
+F 0 "Q2" H 8550 1800 50  0000 C CNN
+F 1 "AO4409" H 8650 1600 50  0000 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 8400 1700 50  0001 C CNN
+	1    8400 1700
+	1 0 0 -1
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 1
+P 9800 1700
+F 0 "J2" H 9950 1800 50  0000 C CNN
+F 1 "HEATER OUT" H 10050 1600 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9800 1700 50  0001 C CNN
+	1    9800 1700
+	1 0 0 -1
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 1
+P 9800 4200
+F 0 "J4" H 9950 4300 50  0000 C CNN
+F 1 "I2C DISPLAY" H 10050 4100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 9800 4200 50  0001 C CNN
+	1    9800 4200
+	1 0 0 -1
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J3
+U 1 1 1
+P 9800 5200
+F 0 "J3" H 9950 5300 50  0000 C CNN
+F 1 "SWD" H 10050 5100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 9800 5200 50  0001 C CNN
+	1    9800 5200
+	1 0 0 -1
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 1
+P 6900 5700
+F 0 "SW1" H 7050 5800 50  0000 C CNN
+F 1 "START/STOP" H 7150 5600 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_TL3301AN" H 6900 5700 50  0001 C CNN
+	1    6900 5700
+	1 0 0 -1
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 1
+P 8200 5700
+F 0 "SW2" H 8350 5800 50  0000 C CNN
+F 1 "LIQUID/POWDER" H 8450 5600 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_TL3301AN" H 8200 5700 50  0001 C CNN
+	1    8200 5700
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 1
+P 9200 5700
+F 0 "D1" H 9350 5800 50  0000 C CNN
+F 1 "STATUS" H 9450 5600 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 9200 5700 50  0001 C CNN
+	1    9200 5700
+	1 0 0 -1
+$EndComp
+Wire Wire Line
+	1250 1200 2050 1200
+Wire Wire Line
+	2350 1200 3050 1200
+Wire Wire Line
+	3750 1500 4000 1500
+Wire Wire Line
+	4650 2800 5250 2800
+Wire Wire Line
+	5550 2600 6000 2600
+Wire Wire Line
+	7200 2900 7600 2900
+Wire Wire Line
+	8100 1700 8250 1700
+Wire Wire Line
+	8700 1700 9750 1700
+Wire Wire Line
+	7200 4200 9750 4200
+Wire Wire Line
+	7200 4400 9750 4400
+Wire Wire Line
+	7200 4600 9750 4600
+Wire Wire Line
+	7200 4800 9750 4800
+Text Label 1700 1200 0    50   ~ 0
+BAT_RAW
+Text Label 3900 1500 0    50   ~ 0
+ISENSE
+Text Label 5900 2600 0    50   ~ 0
+V5
+Text Label 7450 2900 0    50   ~ 0
+DAC_OUT
+Text Label 9100 1700 0    50   ~ 0
+HEATER_PLUS
+Text Label 7750 4200 0    50   ~ 0
+V3V3
+Text Label 7750 4400 0    50   ~ 0
+SCL
+Text Label 7750 4600 0    50   ~ 0
+SDA
+Text Label 7750 4800 0    50   ~ 0
+GND
+Text Label 6900 5500 0    50   ~ 0
+SW_START
+Text Label 8200 5500 0    50   ~ 0
+SW_MODE
+Text Label 9200 5500 0    50   ~ 0
+STATUS
+$EndSCHEMATC
