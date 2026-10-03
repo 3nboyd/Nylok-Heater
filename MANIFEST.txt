@@ -1,6 +1,7 @@
 .gitattributes
 .github/CODEOWNERS
 .github/ISSUE_TEMPLATE/design-validation.yml
+.github/dependabot.yml
 .github/pull_request_template.md
 .github/workflows/validate.yml
 .gitignore
