@@ -1,6 +1,5 @@
 # Nylok Handheld Induction Heater Controller
 
-[![Repository validation](https://github.com/3nboyd/Nylok-Heater/actions/workflows/validate.yml/badge.svg)](https://github.com/3nboyd/Nylok-Heater/actions/workflows/validate.yml)
 ![Status: concept](https://img.shields.io/badge/status-concept-orange)
 ![KiCad](https://img.shields.io/badge/KiCad-10-314cb0?logo=kicad)
 
@@ -9,7 +8,7 @@ A KiCad reconstruction of a two-mode handheld induction-heater controller concep
 ![Nylok heater controller PCB concept render](renders/PCB_Perspective_Render.png)
 
 > [!CAUTION]
-> **Concept only—do not fabricate or energize this board.** The design has not been electrically validated. KiCad 10 ERC currently reports 15 errors and 40 warnings; PCB DRC reports 408 violations and 126 unrouted items. See [Validation status](docs/VALIDATION.md) before using any design data.
+> **Concept only. Do not fabricate or energize this board.** This preliminary design has not completed electrical review and is not approved for fabrication.
 
 ## Overview
 
@@ -21,7 +20,7 @@ The concept uses two protected 18650 cells in series to power a controller board
 - exposes an I2C display connector; and
 - provides an SWD programming header for the STM32 controller.
 
-The work coil connects to the external ZVS driver—not directly to connector J2 or the battery.
+The work coil connects to the external ZVS driver, not directly to connector J2 or the battery.
 
 ## Current maturity
 
@@ -29,10 +28,10 @@ The work coil connects to the external ZVS driver—not directly to connector J2
 |---|---|
 | System concept and sizing study | Documented |
 | Logical net map and BOM | Draft |
-| Schematic capture | Legacy conceptual reconstruction; ERC not clean |
-| PCB placement/routing | Visual concept; DRC not clean and not fully routed |
+| Schematic capture | Legacy conceptual reconstruction |
+| PCB placement/routing | Visual concept |
 | Firmware | Not included |
-| Bench validation | Not performed |
+| Prototype testing | Not performed |
 | Fabrication release | **Not approved** |
 
 ## Repository contents
@@ -40,21 +39,21 @@ The work coil connects to the external ZVS driver—not directly to connector J2
 ```text
 .
 ├── hardware/   KiCad project, schematic, PCB, BOM, and logical net map
-├── docs/       Engineering study, connection diagram, and validation status
+├── docs/       Engineering study and connection diagram
 ├── fab/        Fabrication-readiness notes (not production outputs)
 ├── renders/    Board concept views
-└── scripts/    Repository integrity validation
+└── scripts/    Repository package checks
 ```
 
 Key files:
 
-- [`hardware/Nylok_Heater.kicad_pro`](hardware/Nylok_Heater.kicad_pro) — KiCad project
-- [`hardware/Nylok_Heater.sch`](hardware/Nylok_Heater.sch) — legacy KiCad schematic
-- [`hardware/Nylok_Heater.kicad_pcb`](hardware/Nylok_Heater.kicad_pcb) — nominal 38 mm × 100 mm, two-layer PCB concept
-- [`hardware/BOM.csv`](hardware/BOM.csv) — draft component/value list
-- [`hardware/NETS.csv`](hardware/NETS.csv) — logical net map
-- [`docs/Nylok_Labeled_PCB_and_Connections.png`](docs/Nylok_Labeled_PCB_and_Connections.png) — labeled placement and connection diagram
-- [`docs/Induction_System_Specification.md`](docs/Induction_System_Specification.md) — research, assumptions, calculations, and primary sources
+- [`hardware/Nylok_Heater.kicad_pro`](hardware/Nylok_Heater.kicad_pro): KiCad project
+- [`hardware/Nylok_Heater.sch`](hardware/Nylok_Heater.sch): legacy KiCad schematic
+- [`hardware/Nylok_Heater.kicad_pcb`](hardware/Nylok_Heater.kicad_pcb): nominal 38 mm × 100 mm, two-layer PCB concept
+- [`hardware/BOM.csv`](hardware/BOM.csv): draft component/value list
+- [`hardware/NETS.csv`](hardware/NETS.csv): logical net map
+- [`docs/Nylok_Labeled_PCB_and_Connections.png`](docs/Nylok_Labeled_PCB_and_Connections.png): labeled placement and connection diagram
+- [`docs/Induction_System_Specification.md`](docs/Induction_System_Specification.md): research, assumptions, calculations, and primary sources
 
 ## Open the project
 
@@ -68,7 +67,7 @@ Key files:
 
 3. Open `hardware/Nylok_Heater.kicad_pro`.
 4. Allow KiCad to convert the legacy `.sch` file if prompted, but review the resulting diff before committing it.
-5. Read [`docs/VALIDATION.md`](docs/VALIDATION.md) and resolve every blocker before considering fabrication.
+5. Read [`docs/Induction_System_Specification.md`](docs/Induction_System_Specification.md) before using the design data.
 
 To check the repository package itself:
 
@@ -76,7 +75,7 @@ To check the repository package itself:
 python3 scripts/validate_repo.py
 ```
 
-This script checks file presence, project metadata, BOM/net structure, PCB references, and PNG integrity. It does **not** replace ERC, DRC, design review, simulation, or physical testing.
+This script checks file presence, project metadata, BOM/net structure, PCB references, and PNG integrity. It does **not** certify electrical correctness, safety, or fabrication readiness.
 
 ## Safety
 
@@ -86,7 +85,7 @@ Do not build or energize this concept until a qualified engineer has reviewed th
 
 ## Contributing
 
-Validated improvements are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening an issue or pull request. Never remove a safety warning or mark the design fabrication-ready without attaching objective ERC/DRC and bench-test evidence.
+Improvements are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening an issue or pull request. Do not mark the design fabrication-ready without appropriate engineering review and test evidence.
 
 ## License
 

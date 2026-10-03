@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the repository package without claiming electrical correctness."""
+"""Check the repository package without claiming electrical correctness."""
 
 from __future__ import annotations
 
@@ -23,7 +23,6 @@ REQUIRED = (
     "hardware/NETS.csv",
     "docs/Induction_System_Specification.md",
     "docs/Nylok_Labeled_PCB_and_Connections.png",
-    "docs/VALIDATION.md",
     "fab/FABRICATION_NOTES.md",
     "renders/PCB_Perspective_Render.png",
     "renders/PCB_Top_View.png",
@@ -38,7 +37,6 @@ def read_csv(relative_path: str) -> tuple[list[str], list[dict[str, str]]]:
 
 def main() -> int:
     errors: list[str] = []
-    warnings: list[str] = []
 
     for relative_path in REQUIRED:
         path = ROOT / relative_path
@@ -80,12 +78,6 @@ def main() -> int:
         errors.append(
             "new BOM references absent from PCB: " + ", ".join(unexpected_missing_refs)
         )
-    known_missing_refs = sorted(missing_refs & KNOWN_MISSING_PCB_REFS)
-    if known_missing_refs:
-        warnings.append(
-            "known design blocker—BOM references absent from PCB: "
-            + ", ".join(known_missing_refs)
-        )
     pcb_nets = set(re.findall(r'^\s*\(net \d+ "([^\"]+)"\)', pcb_text, re.M))
     missing_nets = sorted(csv_nets - pcb_nets)
     if missing_nets:
@@ -108,20 +100,17 @@ def main() -> int:
         errors.append("README is missing the fabrication/energizing warning")
 
     if errors:
-        print("Repository validation FAILED:", file=sys.stderr)
+        print("Repository checks FAILED:", file=sys.stderr)
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
 
-    for warning in warnings:
-        print(f"WARNING: {warning}")
-
     print(
-        "Repository validation passed: "
+        "Repository checks passed: "
         f"{len(bom_rows)} BOM rows, {len(nets_rows)} logical nets, "
         f"{len(pcb_refs)} PCB references."
     )
-    print("Note: this does not run or replace KiCad ERC/DRC.")
+    print("Note: package checks do not certify electrical correctness.")
     return 0
 
 

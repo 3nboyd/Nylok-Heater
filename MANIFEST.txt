@@ -13,7 +13,6 @@ README.md
 SECURITY.md
 docs/Induction_System_Specification.md
 docs/Nylok_Labeled_PCB_and_Connections.png
-docs/VALIDATION.md
 fab/FABRICATION_NOTES.md
 hardware/BOM.csv
 hardware/NETS.csv
