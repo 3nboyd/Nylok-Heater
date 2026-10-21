@@ -5,6 +5,31 @@
 
 A KiCad reconstruction of a two-mode handheld induction-heater controller concept, prepared for the Notre Dame / Marmon / Nylok Innovate-a-thon.
 
+## Heater product design
+
+<p align="center">
+  <img src="renders/Nylok_Heater_Product_Design.png" width="380" alt="CAD rendering of the Nylok handheld heater product design, showing its copper induction coil, cylindrical housing, button, and display">
+</p>
+
+The image above shows the actual heater product design.
+
+**Interested in the CAD files and final product designs? Please contact [Noah Boyd](https://github.com/3nboyd).**
+
+## Full cost analysis
+
+**[Read the complete breakdown, calculations, and cost analysis](COST_ANALYSIS.md)** · [Download the original Word document](Nylok_Heater_Cost_Analysis.docx) · [View the source on Google Drive](https://docs.google.com/document/d/1d1SXaH8sqosNrCxIEX-nSozUCm1gSHQc/edit)
+
+The full analysis covers the itemized prototype parts, two-mode controller and display, heating calculations, battery runtime, and estimated manufacturing costs at a 5,000-unit order quantity.
+
+| Cost scenario | Basic heater | Two-mode heater with countdown |
+|---|---:|---:|
+| Prototype parts allocation | $18.06 | $31.37 |
+| Estimated manufacturing cost per heater at 5,000 units | $13.14 | $19.14 |
+
+Source prices were checked October 3, 2026. Prototype figures exclude the housing, tools, shipping, and tax; production figures include estimated housing, assembly, functional test, packaging, and reserve. See the full analysis for all assumptions and exclusions.
+
+## Controller PCB concept
+
 ![Nylok heater controller PCB concept render](renders/PCB_Perspective_Render.png)
 
 > [!CAUTION]
@@ -39,14 +64,19 @@ The work coil connects to the external ZVS driver, not directly to connector J2 
 ```text
 .
 ├── hardware/   KiCad project, schematic, PCB, BOM, and logical net map
+├── COST_ANALYSIS.md                 Full readable cost analysis and calculations
+├── Nylok_Heater_Cost_Analysis.docx   Original complete cost-analysis document
 ├── docs/       Engineering study and connection diagram
 ├── fab/        Fabrication-readiness notes (not production outputs)
-├── renders/    Board concept views
+├── renders/    Heater product design and board concept views
 └── scripts/    Repository package checks
 ```
 
 Key files:
 
+- [`COST_ANALYSIS.md`](COST_ANALYSIS.md): full cost breakdown, calculations, production estimates, and references
+- [`Nylok_Heater_Cost_Analysis.docx`](Nylok_Heater_Cost_Analysis.docx): original analysis document
+- [`renders/Nylok_Heater_Product_Design.png`](renders/Nylok_Heater_Product_Design.png): actual heater product design rendering
 - [`hardware/Nylok_Heater.kicad_pro`](hardware/Nylok_Heater.kicad_pro): KiCad project
 - [`hardware/Nylok_Heater.sch`](hardware/Nylok_Heater.sch): legacy KiCad schematic
 - [`hardware/Nylok_Heater.kicad_pcb`](hardware/Nylok_Heater.kicad_pcb): nominal 38 mm × 100 mm, two-layer PCB concept

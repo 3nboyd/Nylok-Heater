@@ -4,3 +4,4 @@
 *.sch text eol=lf
 *.csv text eol=lf
 *.png binary
+*.docx binary

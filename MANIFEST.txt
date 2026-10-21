@@ -8,7 +8,9 @@
 CHANGELOG.md
 CITATION.cff
 CONTRIBUTING.md
+COST_ANALYSIS.md
 MANIFEST.txt
+Nylok_Heater_Cost_Analysis.docx
 README.md
 SECURITY.md
 docs/Induction_System_Specification.md
@@ -19,6 +21,7 @@ hardware/NETS.csv
 hardware/Nylok_Heater.kicad_pcb
 hardware/Nylok_Heater.kicad_pro
 hardware/Nylok_Heater.sch
+renders/Nylok_Heater_Product_Design.png
 renders/PCB_Perspective_Render.png
 renders/PCB_Top_View.png
 scripts/validate_repo.py
