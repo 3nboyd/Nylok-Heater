@@ -8,10 +8,10 @@ $Descr A4 11693 8268
 Sheet 1 1
 Title "Nylok Two-Mode Handheld Induction Heater Controller"
 Date "2026-10-03"
-Rev "A - reconstructed concept"
+Rev "A"
 Comp "Notre Dame / Nylok Innovate-a-thon"
 Comment1 "External ZVS induction driver connects at J2"
-Comment2 "Conceptual reconstruction from finalized design; verify in KiCad before fabrication"
+Comment2 "Verify in KiCad and obtain an electrical review before fabrication"
 $EndDescr
 $Comp
 L Connector_Generic:Conn_01x02 J1

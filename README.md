@@ -1,9 +1,8 @@
 # Nylok Handheld Induction Heater Controller
 
-![Status: concept](https://img.shields.io/badge/status-concept-orange)
 ![KiCad](https://img.shields.io/badge/KiCad-10-314cb0?logo=kicad)
 
-A KiCad reconstruction of a two-mode handheld induction-heater controller concept, prepared for the Notre Dame / Marmon / Nylok Innovate-a-thon.
+A two-mode handheld induction-heater controller designed in KiCad for the Notre Dame / Marmon / Nylok Innovate-a-thon.
 
 ## Heater product design
 
@@ -28,16 +27,16 @@ The full analysis covers the itemized prototype parts, two-mode controller and d
 
 Source prices were checked October 3, 2026. Prototype figures exclude the housing, tools, shipping, and tax; production figures include estimated housing, assembly, functional test, packaging, and reserve. See the full analysis for all assumptions and exclusions.
 
-## Controller PCB concept
+## Controller PCB
 
-![Nylok heater controller PCB concept render](renders/PCB_Perspective_Render.png)
+![Nylok heater controller PCB render](renders/PCB_Perspective_Render.png)
 
 > [!CAUTION]
-> **Concept only. Do not fabricate or energize this board.** This preliminary design has not completed electrical review and is not approved for fabrication.
+> **Do not fabricate or energize this board without a qualified electrical and safety review.** Review the power stage, battery protection, thermal behavior, and coil compatibility before use.
 
 ## Overview
 
-The concept uses two protected 18650 cells in series to power a controller board that:
+The controller uses two protected 18650 cells in series to power a controller board that:
 
 - measures input current;
 - provides regulated 5 V and 3.3 V rails;
@@ -47,18 +46,6 @@ The concept uses two protected 18650 cells in series to power a controller board
 
 The work coil connects to the external ZVS driver, not directly to connector J2 or the battery.
 
-## Current maturity
-
-| Area | Status |
-|---|---|
-| System concept and sizing study | Documented |
-| Logical net map and BOM | Draft |
-| Schematic capture | Legacy conceptual reconstruction |
-| PCB placement/routing | Visual concept |
-| Firmware | Not included |
-| Prototype testing | Not performed |
-| Fabrication release | **Not approved** |
-
 ## Repository contents
 
 ```text
@@ -67,8 +54,8 @@ The work coil connects to the external ZVS driver, not directly to connector J2 
 ├── COST_ANALYSIS.md                 Full readable cost analysis and calculations
 ├── Nylok_Heater_Cost_Analysis.docx   Original complete cost-analysis document
 ├── docs/       Engineering study and connection diagram
-├── fab/        Fabrication-readiness notes (not production outputs)
-├── renders/    Heater product design and board concept views
+├── fab/        Fabrication and electrical-review notes
+├── renders/    Heater product design and board views
 └── scripts/    Repository package checks
 ```
 
@@ -79,8 +66,8 @@ Key files:
 - [`renders/Nylok_Heater_Product_Design.png`](renders/Nylok_Heater_Product_Design.png): actual heater product design rendering
 - [`hardware/Nylok_Heater.kicad_pro`](hardware/Nylok_Heater.kicad_pro): KiCad project
 - [`hardware/Nylok_Heater.sch`](hardware/Nylok_Heater.sch): legacy KiCad schematic
-- [`hardware/Nylok_Heater.kicad_pcb`](hardware/Nylok_Heater.kicad_pcb): nominal 38 mm × 100 mm, two-layer PCB concept
-- [`hardware/BOM.csv`](hardware/BOM.csv): draft component/value list
+- [`hardware/Nylok_Heater.kicad_pcb`](hardware/Nylok_Heater.kicad_pcb): nominal 38 mm × 100 mm, two-layer PCB
+- [`hardware/BOM.csv`](hardware/BOM.csv): component/value list
 - [`hardware/NETS.csv`](hardware/NETS.csv): logical net map
 - [`docs/Nylok_Labeled_PCB_and_Connections.png`](docs/Nylok_Labeled_PCB_and_Connections.png): labeled placement and connection diagram
 - [`docs/Induction_System_Specification.md`](docs/Induction_System_Specification.md): research, assumptions, calculations, and primary sources
@@ -111,7 +98,7 @@ This script checks file presence, project metadata, BOM/net structure, PCB refer
 
 Induction heating combines high current, resonant switching, strong local heating, rechargeable cells, and potentially hazardous workpiece temperatures. A short circuit, unsuitable component, control fault, inadequate insulation, or incorrect battery protection can cause burns, fire, cell venting, or equipment damage.
 
-Do not build or energize this concept until a qualified engineer has reviewed the power stage, protection, thermal behavior, creepage/clearance, component ratings, coil/tank behavior, enclosure, battery system, and failure modes. Use current-limited isolated laboratory power during early development and appropriate PPE, guarding, instrumentation, and fire precautions.
+Do not build or energize the heater until a qualified engineer has reviewed the power stage, protection, thermal behavior, creepage/clearance, component ratings, coil/tank behavior, enclosure, battery system, and failure modes. Use current-limited isolated laboratory power during early development and appropriate PPE, guarding, instrumentation, and fire precautions.
 
 ## Contributing
 

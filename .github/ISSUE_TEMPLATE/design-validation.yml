@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        This repository is a non-fabrication-ready concept. Do not energize suspect hardware to reproduce an issue.
+        Do not energize suspect hardware to reproduce an issue.
   - type: dropdown
     id: area
     attributes:

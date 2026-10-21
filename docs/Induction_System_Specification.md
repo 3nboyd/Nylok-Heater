@@ -6,7 +6,7 @@ Prepared for the Notre Dame / Marmon / Nylok Innovate-a-thon, October 3, 2026.
 
 Develop a **100 W battery-side input prototype for carbon-steel fasteners**, using an existing nominal 18 V tool battery, a documented low-voltage resonant induction driver, an insulated copper work coil, and closed-loop screw-temperature measurement. Use wired laboratory power first. Keep the sleeve application process separate: heat, switch off, withdraw the coil, then place the sleeve.
 
-This is a system architecture and sizing study, not a fabrication-ready schematic or demonstrated heater. The missing piece for exact component selection is the measured loaded coil impedance and achievable power transfer into representative screws. No specific switching transistors, tank capacitor ratings, PCB trace widths, or coil current limits should be signed off from the thermal calculation alone.
+Exact component selection depends on measured loaded coil impedance and achievable power transfer into representative screws. No specific switching transistors, tank capacitor ratings, PCB trace widths, or coil current limits should be signed off from the thermal calculation alone.
 
 The 65°C and 250°C targets used below are illustrative calculation points. They are **not confirmed Nylok application temperatures**. Exact chemistry, allowable overshoot, dwell and transfer time remain unknown. The main base case is a 10 g effective heated steel mass initially at 25°C.
 
