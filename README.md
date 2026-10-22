@@ -10,7 +10,7 @@ A two-mode handheld induction-heater controller designed in KiCad for the Notre 
   <img src="renders/Nylok_Heater_Product_Design.png" width="380" alt="CAD rendering of the Nylok handheld heater product design, showing its copper induction coil, cylindrical housing, button, and display">
 </p>
 
-The image above shows the actual heater product design.
+The rendering shows the heater product design. The KiCad files below describe its controller board; heating also requires a separate induction driver and work coil.
 
 **Interested in the CAD files and final product designs? Please contact [Noah Boyd](https://github.com/3nboyd).**
 
@@ -44,7 +44,7 @@ The controller uses two protected 18650 cells in series to power a controller bo
 - exposes an Inter-Integrated Circuit (I2C) display connector; and
 - provides a Serial Wire Debug (SWD) programming header for the STM32 controller.
 
-The work coil connects to the external ZVS driver, not directly to connector J2 or the battery.
+The controller switches power to the external ZVS driver, which drives the work coil. Connect the coil to that driver, not directly to connector J2 or the battery.
 
 ## Repository contents
 
