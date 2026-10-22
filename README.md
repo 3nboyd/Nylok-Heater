@@ -32,7 +32,7 @@ Source prices were checked October 3, 2026. Prototype figures exclude the housin
 ![Nylok heater controller PCB render](renders/PCB_Perspective_Render.png)
 
 > [!CAUTION]
-> **Do not fabricate or energize this board without a qualified electrical and safety review.** Review the power stage, battery protection, thermal behavior, and coil compatibility before use.
+> **Do not fabricate or energize this board without a qualified electrical and safety review.** See the [review checklist](#safety).
 
 ## Overview
 
@@ -98,11 +98,11 @@ This script checks file presence, project metadata, BOM/net structure, PCB refer
 
 Induction heating combines high current, resonant switching, strong local heating, rechargeable cells, and potentially hazardous workpiece temperatures. A short circuit, unsuitable component, control fault, inadequate insulation, or incorrect battery protection can cause burns, fire, cell venting, or equipment damage.
 
-Do not build or energize the heater until a qualified engineer has reviewed the power stage, protection, thermal behavior, creepage/clearance, component ratings, coil/tank behavior, enclosure, battery system, and failure modes. Use current-limited isolated laboratory power during early development and appropriate PPE, guarding, instrumentation, and fire precautions.
+A qualified engineer must review the power stage, protection, thermal behavior, creepage/clearance, component ratings, coil/tank behavior, enclosure, battery system, and failure modes before fabrication or use. Early development requires current-limited isolated laboratory power, appropriate PPE, guarding, instrumentation, and fire precautions.
 
 ## Contributing
 
-Improvements are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening an issue or pull request. Do not mark the design fabrication-ready without appropriate engineering review and test evidence.
+Improvements are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening an issue or pull request. Changes to fabrication status must include engineering-review and test evidence.
 
 ## License
 
