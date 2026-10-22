@@ -1,4 +1,4 @@
-# Nylok Handheld Induction Heater — Full Cost Analysis
+# Nylok Handheld Induction Heater: Full Cost Analysis
 
 Full text and tables from the supplied analysis. [Download the original document](Nylok_Heater_Cost_Analysis.docx) or [view the source on Google Drive](https://docs.google.com/document/d/1d1SXaH8sqosNrCxIEX-nSozUCm1gSHQc/edit).
 
