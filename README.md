@@ -16,9 +16,7 @@ The rendering shows the heater product design. The KiCad files below describe it
 
 ## Full cost analysis
 
-**[Read the complete breakdown, calculations, and cost analysis](COST_ANALYSIS.md)** · [Download the original Word document](Nylok_Heater_Cost_Analysis.docx) · [View the source on Google Drive](https://docs.google.com/document/d/1d1SXaH8sqosNrCxIEX-nSozUCm1gSHQc/edit)
-
-The full analysis covers the itemized prototype parts, two-mode controller and display, heating calculations, battery runtime, and estimated manufacturing costs at a 5,000-unit order quantity.
+[Full cost analysis](COST_ANALYSIS.md) covers parts, heating calculations, battery runtime, and manufacturing estimates for 5,000 units. The [original Word document](Nylok_Heater_Cost_Analysis.docx) and [Google Drive source](https://docs.google.com/document/d/1d1SXaH8sqosNrCxIEX-nSozUCm1gSHQc/edit) are also available.
 
 | Cost scenario | Basic heater | Two-mode heater with countdown |
 |---|---:|---:|
