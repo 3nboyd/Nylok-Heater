@@ -40,9 +40,9 @@ The controller uses two protected 18650 cells in series to power a controller bo
 
 - measures input current;
 - provides regulated 5 V and 3.3 V rails;
-- controls a switched DC output for an **external ZVS induction driver**;
-- exposes an I2C display connector; and
-- provides an SWD programming header for the STM32 controller.
+- controls a switched DC output for an **external zero-voltage-switching (ZVS) induction driver**;
+- exposes an Inter-Integrated Circuit (I2C) display connector; and
+- provides a Serial Wire Debug (SWD) programming header for the STM32 controller.
 
 The work coil connects to the external ZVS driver, not directly to connector J2 or the battery.
 
@@ -50,7 +50,7 @@ The work coil connects to the external ZVS driver, not directly to connector J2 
 
 ```text
 .
-├── hardware/   KiCad project, schematic, PCB, BOM, and logical net map
+├── hardware/   KiCad project, schematic, PCB, bill of materials (BOM), and logical net map
 ├── COST_ANALYSIS.md                 Full readable cost analysis and calculations
 ├── Nylok_Heater_Cost_Analysis.docx   Original complete cost-analysis document
 ├── docs/       Engineering study and connection diagram
